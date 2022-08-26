@@ -21,7 +21,7 @@ function App() {
       </header>
       <div className="hero-video">
         <video autoPlay muted loop>
-          <source src="../src/assets/x3.mp4"/>
+          <source src="src/assets/x3.mp4"/>
         </video>
       </div>
       <div className="hero-about">
