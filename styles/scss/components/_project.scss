@@ -1,0 +1,116 @@
+@use '../util/custom-properties';
+@use '../util/extends';
+
+.projects-container
+{
+    @extend .flex;
+    flex-direction: column;
+}
+
+.project
+{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    height: 20rem;
+
+    &__banner
+    {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        font-size: 2rem;
+        padding: .4rem 0;
+        text-align: center;
+        font-family: var(--pixel-font);
+        background-image: linear-gradient(0deg,#594ab0,#51b1da);
+        z-index: 4;
+
+        &-link
+        {
+            position: absolute;
+            background-image: url('../../../dist/projects/goose.PNG');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            z-index: 2;
+            transition: ease-in-out 300ms;
+
+
+            &:hover + section,& + section:hover
+            {
+                width: 40rem;
+            }
+
+            &:hover
+            {
+               transform: scale(110%);
+               background-color: var(--secondary-color);
+               opacity: .5;
+            }
+        }
+    }
+    &__description-container
+    {
+        position: absolute;
+        overflow: hidden;
+        right: 0;
+        width: 0;
+        height: 100%;
+        transition: ease-in-out 400ms;
+    }
+    &__description
+    {
+        @extend .flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: absolute;
+        overflow: hidden;
+        right: 0;
+        width: 40rem;
+        padding: 5rem 3rem 2rem;
+        height: 100%;
+        background-color: var(--secondary-color);
+        z-index: 3;
+    }
+    &__list
+    {
+
+    }
+    &__button-container
+    {
+        @extend .flex;
+        justify-items:flex-end;
+        gap: 1rem;
+    }
+    &__button
+    {
+        @extend .flex;
+        flex: 1;
+        gap: 1rem;
+        font-size: 1.2rem;
+        color: var(--text-color);
+        text-transform: capitalize;
+        padding: 1rem 1.8rem;
+        border-radius: .5rem;
+        cursor: pointer;
+        background-color: var(--primary-color);
+        font-family: var(--pixel-font);
+
+        i
+        {
+            font-size: 2rem;
+        }
+        &--blue
+        {
+            background-color: var(--gradient-color2);
+        }
+    }
+}

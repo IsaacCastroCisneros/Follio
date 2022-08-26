@@ -1,0 +1,25 @@
+@use '../util/custom-properties';
+@use '../util/extends';
+
+.hero-video
+{
+   @extend .container;
+   position: relative;
+   overflow: hidden;
+   height: 15em;
+
+   video
+   {
+      position: absolute;     
+      width: 100%;
+      bottom: -4em;
+   }
+}
+
+@media only screen and (max-width:400px) 
+{
+    .hero-video
+    {
+        height:5em;
+    }
+}

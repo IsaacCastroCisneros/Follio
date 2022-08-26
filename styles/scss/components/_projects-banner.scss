@@ -1,0 +1,15 @@
+@use '../util/custom-properties';
+@use '../util/extends';
+
+
+.projects-banner
+{
+    @extend .padding;
+    padding-bottom: 4rem;
+
+    h1
+    {
+        @extend .title;
+        font-family: var(--pixel-font);
+    }
+}
