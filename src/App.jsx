@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-    <img src="assets/Captura.PNG" alt=""></img>
+    <img src="src/assets/Captura.PNG" alt=""></img>
       <header className="hero-banner">
         <div className="hero-banner__layer"></div>
         <h1 className="hero-banner__name">Isaac Castro</h1>
@@ -21,7 +21,7 @@ function App() {
       </header>
       <div className="hero-video">
         <video autoPlay muted loop>
-          <source src="./assets/x3.mp4"/>
+          <source src="src/assets/x3.mp4"/>
         </video>
       </div>
       <div className="hero-about">
