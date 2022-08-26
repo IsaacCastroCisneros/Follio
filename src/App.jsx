@@ -13,7 +13,6 @@ function App() {
 
   return (
     <>
-       <img src="./src/assets/Captura.PNG" alt="" />
       <header className="hero-banner">
         <div className="hero-banner__layer"></div>
         <h1 className="hero-banner__name">Isaac Castro</h1>
