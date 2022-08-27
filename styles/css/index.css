@@ -8,7 +8,7 @@
   --normal-font:"Anek Telugu", sans-serif;
 }
 
-.flex, .projects-container, .project__description, .project__button-container, .project__button, .hero-about__section:last-child, .hero-about__icon-container a, .hero-banner {
+.flex, .projects-container, .projects-block, .project__description, .project__button-container, .project__button, .hero-about__section:last-child, .hero-about__icon-container a, .hero-banner {
   display: flex;
   align-items: center;
 }
@@ -259,17 +259,26 @@ body {
   flex-direction: column;
 }
 
-.project {
-  display: block;
-  position: relative;
-  overflow: hidden;
-  text-decoration: none;
-  color: #fff;
+.projects-block {
+  flex-direction: column;
   width: 100%;
   height: 20rem;
 }
-.project__banner {
-  position: absolute;
+.projects-block.active .project__link {
+  transform: scale(110%);
+  background-color: var(--secondary-color);
+  opacity: 0.5;
+}
+.projects-block.active .project__description-container {
+  width: 40rem;
+}
+.projects-block.active .project__icon-container {
+  opacity: 1;
+  left: 1rem;
+}
+.projects-block__banner {
+  display: block;
+  position: relative;
   width: 100%;
   top: 0;
   font-size: 2rem;
@@ -279,7 +288,17 @@ body {
   background-image: linear-gradient(0deg, #594ab0, #51b1da);
   z-index: 4;
 }
-.project__banner-link {
+
+.project {
+  flex: 1;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+}
+.project__link {
   position: absolute;
   background-image: url("../../src/assets/projects/goose.PNG");
   background-position: center;
@@ -290,18 +309,6 @@ body {
   top: 0;
   z-index: 2;
   transition: ease-in-out 300ms;
-}
-.project__banner-link:hover + section, .project__banner-link + section:hover {
-  width: 40rem;
-}
-.project__banner-link:hover, .project__banner-link.active {
-  transform: scale(110%);
-  background-color: var(--secondary-color);
-  opacity: 0.5;
-}
-.project__banner-link:hover ~ .project__icon-container {
-  opacity: 1;
-  left: 1rem;
 }
 .project__description-container {
   position: absolute;
@@ -319,16 +326,14 @@ body {
   overflow: hidden;
   right: 0;
   width: 40rem;
-  padding: 5rem 3rem 2rem;
+  padding: 2rem;
   height: 100%;
   background-color: var(--secondary-color);
   z-index: 3;
 }
-.project__description.active {
-  width: 40rem;
-}
 .project__list {
   margin-left: 1rem;
+  font-size: 1.1rem;
 }
 .project__button-container {
   width: 100%;
@@ -354,7 +359,6 @@ body {
   background-color: var(--gradient-color2);
 }
 .project__icon-container {
-  pointer-events: none;
   position: absolute;
   z-index: 9;
   bottom: 1rem;
@@ -363,15 +367,10 @@ body {
   border: 1px solid #343764;
   transition: ease-in-out 400ms;
 }
-.project__icon-container.active {
-  opacity: 1;
-  left: 1rem;
-}
 
 @media only screen and (max-width: 1277px) {
   .project__description {
     width: 25rem;
-    padding: 4rem 2rem 1rem;
   }
   .project__button-container {
     width: 100%;

@@ -30,7 +30,7 @@ function App()
       </header>
       <div className="hero-video">
         <video autoPlay muted loop>
-          <source src={video}/>
+          <source src={video} />
         </video>
       </div>
       <div className="hero-about">
@@ -78,50 +78,50 @@ function App()
         <h1>Projects:</h1>
       </div>
       <div className="projects-container">
-        <div className="project" target="blank">
-          <span className="project__banner">titulo</span>
-          <a
-            className="project__banner-link"
-            target="blank"
-            href="https://audiogoose.herokuapp.com/"
-            ref={projectBannerLink}
-          ></a>
-          <section className="project__description-container"
-            onMouseEnter={()=>
-            {
-              projectBannerLink.current.classList.add('active');
-              projectIconContainer.current.classList.add('active');
-            }}
-            onMouseLeave={()=>
-            {
-              projectBannerLink.current.classList.remove('active');
-              projectIconContainer.current.classList.remove('active');
-            }}
-           >
-            <div className='project__description'>
-              <ul className="project__list">
-                <li>hmmmmmmmm</li>
-                <li>hmmmmmmmm</li>
-                <li>hmmmmmmmm</li>
-              </ul>
-              <div className="project__button-container">
-                <button className="project__button">
-                  <i class="fa-solid fa-rocket"></i>
-                  <span>Ir al sitio</span>
-                </button>
-                <button className="project__button project__button--blue">
-                  <i class="fa-brands fa-github"></i>
-                  <span>Repositorio</span>
-                </button>
+        <div
+          className="projects-block"
+          onMouseEnter={(e) => {
+            e.target.closest(".projects-block").classList.add("active");
+          }}
+          onMouseLeave={(e) => {
+            e.target.closest(".projects-block").classList.remove("active");
+          }}
+        >
+          <span className="projects-block__banner">titulo</span>
+          <div className="project" target="blank">
+            <a
+              className="project__link"
+              target="blank"
+              href="https://audiogoose.herokuapp.com/"
+              ref={projectBannerLink}
+            ></a>
+            <section
+              className="project__description-container"
+            >
+              <div className="project__description">
+                <ul className="project__list">
+                  <li>hmmmmmmmm</li>
+                  <li>hmmmmmmmm</li>
+                  <li>hmmmmmmmm</li>
+                </ul>
+                <div className="project__button-container">
+                  <button className="project__button">
+                    <i class="fa-solid fa-rocket"></i>
+                    <span>Ir al sitio</span>
+                  </button>
+                  <button className="project__button project__button--blue">
+                    <i class="fa-brands fa-github"></i>
+                    <span>Repositorio</span>
+                  </button>
+                </div>
               </div>
+            </section>
+            <div className="project__icon-container" ref={projectIconContainer}>
+              <i class="fa-brands fa-square-js" title="JavaScript"></i>
+              <i class="fa-solid fa-database" title="Database"></i>
+              <i class="fa-brands fa-node-js"></i>
+              <i class="fa-brands fa-css3-alt"></i>
             </div>
-          </section>
-          <div className='project__icon-container' 
-          ref={projectIconContainer}>
-             <i class="fa-brands fa-square-js" title='JavaScript'></i>
-             <i class="fa-solid fa-database" title='Database'></i>
-             <i class="fa-brands fa-node-js"></i>
-             <i class="fa-brands fa-css3-alt"></i>
           </div>
         </div>
       </div>
