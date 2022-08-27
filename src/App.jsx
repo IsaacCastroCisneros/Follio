@@ -1,25 +1,25 @@
-import { useState,useRef,useEffect } from 'react';
+import React ,{ useState,useRef,useEffect,useContext} from 'react';
+import Project from './components/Project';
 import video from './assets/x3.mp4';
+
+export const AppContext = React.createContext();
 
 function App() 
 {
   const iconLeftContainer = useRef();
   const iconRiteContainer = useRef();
   const projectBannerLink = useRef();
-  const projectIconContainer = useRef();
 
+  const contextValues =
+  {
+    projectBannerLink,
+  }
 
   useEffect(()=>
   {
     iconRiteContainer.current
     .style=`width:${iconLeftContainer.current.offsetWidth}px`;
   })
-/* 
-  function mouseEnter()
-  {
-    
-    console.log('fdfd')
-  } */
 
   return (
     <>
@@ -78,52 +78,9 @@ function App()
         <h1>Projects:</h1>
       </div>
       <div className="projects-container">
-        <div
-          className="projects-block"
-          onMouseEnter={(e) => {
-            e.target.closest(".projects-block").classList.add("active");
-          }}
-          onMouseLeave={(e) => {
-            e.target.closest(".projects-block").classList.remove("active");
-          }}
-        >
-          <span className="projects-block__banner">titulo</span>
-          <div className="project" target="blank">
-            <a
-              className="project__link"
-              target="blank"
-              href="https://audiogoose.herokuapp.com/"
-              ref={projectBannerLink}
-            ></a>
-            <section
-              className="project__description-container"
-            >
-              <div className="project__description">
-                <ul className="project__list">
-                  <li>hmmmmmmmm</li>
-                  <li>hmmmmmmmm</li>
-                  <li>hmmmmmmmm</li>
-                </ul>
-                <div className="project__button-container">
-                  <button className="project__button">
-                    <i class="fa-solid fa-rocket"></i>
-                    <span>Ir al sitio</span>
-                  </button>
-                  <button className="project__button project__button--blue">
-                    <i class="fa-brands fa-github"></i>
-                    <span>Repositorio</span>
-                  </button>
-                </div>
-              </div>
-            </section>
-            <div className="project__icon-container" ref={projectIconContainer}>
-              <i class="fa-brands fa-square-js" title="JavaScript"></i>
-              <i class="fa-solid fa-database" title="Database"></i>
-              <i class="fa-brands fa-node-js"></i>
-              <i class="fa-brands fa-css3-alt"></i>
-            </div>
-          </div>
-        </div>
+        <AppContext.Provider value={contextValues}>
+           <Project/>
+        </AppContext.Provider>
       </div>
     </>
   );

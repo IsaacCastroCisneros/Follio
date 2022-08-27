@@ -300,7 +300,6 @@ body {
 }
 .project__link {
   position: absolute;
-  background-image: url("../../src/assets/projects/goose.PNG");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -343,6 +342,7 @@ body {
 .project__button {
   flex: 1;
   gap: 1rem;
+  text-decoration: none;
   font-size: 1.2rem;
   color: var(--text-color);
   text-transform: capitalize;
@@ -366,6 +366,9 @@ body {
   opacity: 0;
   border: 1px solid #343764;
   transition: ease-in-out 400ms;
+}
+.project__icon-container--mob {
+  display: none;
 }
 
 @media only screen and (max-width: 1277px) {
@@ -391,6 +394,52 @@ body {
     display: block;
     width: 100%;
     text-align: center;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .projects-block {
+    height: fit-content;
+  }
+  .projects-block__banner {
+    font-size: 1.5rem;
+    padding: 0.2rem 1rem;
+  }
+
+  .project__description-container--desktop, .project__icon-container--desktop {
+    display: none;
+  }
+  .project__link {
+    display: block;
+    width: 100%;
+    height: 10rem;
+    position: relative;
+    background-size: 200%;
+  }
+  .project__icon-container--mob {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-evenly;
+    left: 0 !important;
+    opacity: 1;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    padding: 1rem;
+  }
+  .project__description-container--mob {
+    position: relative;
+    height: initial;
+    width: 100% !important;
+  }
+  .project__description-container--mob .project__description {
+    width: 100%;
+    position: relative;
+  }
+  .project__description-container--mob .project__description > * {
+    position: relative;
+  }
+  .project__description-container--mob .project__button-container {
+    margin-top: 2rem;
   }
 }
 

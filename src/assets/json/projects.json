@@ -1,0 +1,100 @@
+[
+  {
+    "name":"E-Commerce Site | Audio Goose",
+    "image":"../../src/assets/projects/goose.PNG",
+    "siteLink":"https://audiogoose.herokuapp.com/",
+    "repoLink":"https://github.com/IsaacCastroCisneros/E-commerce-audioGoose",
+    "description":
+    [
+       "Permite realizar compras",
+       "Permite Buscar productos",
+       "Base de datos con MongoDB"
+    ],
+    "icons":
+    [
+      {
+        "title":"Javascript",
+        "class":"fa-brands fa-square-js"
+      },
+      {
+        "title":"Database",
+        "class":"fa-solid fa-database"
+      },
+      {
+        "title":"Node.js",
+        "class":"fa-brands fa-node-js"
+      },
+      {
+        "title":"CSS",
+        "class":"fa-brands fa-css3-alt"
+      }
+    ]
+  },
+  {
+    "name":"Landign-page | Font Awesome",
+    "image":"../../src/assets/projects/fontAwesome.PNG",
+    "siteLink":"https://font-awesome-landing-page.netlify.app/",
+    "repoLink":"https://github.com/IsaacCastroCisneros/Font-Awesome",
+    "description":
+    [
+       "Uso masivo de FlexBox y Grid",
+       "Totalmente Responsivo"
+    ],
+    "icons":
+    [
+      {
+        "title":"Javascript",
+        "class":"fa-brands fa-square-js"
+      },
+      {
+        "title":"CSS",
+        "class":"fa-brands fa-css3-alt"
+      }
+    ]
+  },
+  {
+    "name":"To-do List",
+    "image":"../../src/assets/projects/todo-list.PNG",
+    "siteLink":"https://todo-list-isaac.netlify.app/",
+    "repoLink":"https://github.com/IsaacCastroCisneros/Todo-List",
+    "description":
+    [
+       "Permite agregar y eliminar tareas",
+       "Permite ordernar tareas",
+       "Guarda datos en el navegador con localstorage"
+    ],
+    "icons":
+    [
+      {
+        "title":"Javascript",
+        "class":"fa-brands fa-square-js"
+      },
+      {
+        "title":"CSS",
+        "class":"fa-brands fa-css3-alt"
+      }
+    ]
+  },
+  {
+    "name":"Custom Selector",
+    "image":"../../src/assets/projects/selector.PNG",
+    "siteLink":"https://custom-selector-isaac.netlify.app/",
+    "repoLink":"https://github.com/IsaacCastroCisneros/custom-selector",
+    "description":
+    [
+       "Permite navegar con el teclado"
+    ],
+    "icons":
+    [
+      {
+        "title":"Javascript",
+        "class":"fa-brands fa-square-js"
+      },
+      {
+        "title":"CSS",
+        "class":"fa-brands fa-css3-alt"
+      }
+    ]
+  }
+ 
+]
