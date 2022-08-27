@@ -1,4 +1,5 @@
 import { useState,useRef,useEffect } from 'react';
+import video from './assets/x3.mp4';
 
 function App() {
   const iconLeftContainer = useRef();
@@ -13,7 +14,6 @@ function App() {
 
   return (
     <>
-    <img src="src/assets/Captura.PNG" alt=""></img>
       <header className="hero-banner">
         <div className="hero-banner__layer"></div>
         <h1 className="hero-banner__name">Isaac Castro</h1>
@@ -21,7 +21,7 @@ function App() {
       </header>
       <div className="hero-video">
         <video autoPlay muted loop>
-          <source src="src/assets/x3.mp4"/>
+          <source src={video}/>
         </video>
       </div>
       <div className="hero-about">
