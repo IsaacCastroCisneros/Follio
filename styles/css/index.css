@@ -21,7 +21,7 @@
   cursor: pointer;
 }
 
-.icon-container, .hero-about__icon-container {
+.icon-container, .project__icon-container, .hero-about__icon-container {
   display: inline-flex;
   align-items: center;
   font-size: 2.3rem;
@@ -89,7 +89,7 @@ body {
   justify-content: center;
   position: relative;
   padding: 0 2rem;
-  background-image: url("../../src/assets/Captura.PNG");
+  background-image: url(" ../../src/assets/Captura.PNG");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -162,6 +162,7 @@ body {
   align-items: flex-end;
   justify-content: space-between;
   margin-top: 8rem;
+  gap: 1rem;
 }
 .hero-about__icon-container {
   justify-content: space-between;
@@ -293,10 +294,14 @@ body {
 .project__banner-link:hover + section, .project__banner-link + section:hover {
   width: 40rem;
 }
-.project__banner-link:hover {
+.project__banner-link:hover, .project__banner-link.active {
   transform: scale(110%);
   background-color: var(--secondary-color);
   opacity: 0.5;
+}
+.project__banner-link:hover ~ .project__icon-container {
+  opacity: 1;
+  left: 1rem;
 }
 .project__description-container {
   position: absolute;
@@ -319,7 +324,14 @@ body {
   background-color: var(--secondary-color);
   z-index: 3;
 }
+.project__description.active {
+  width: 40rem;
+}
+.project__list {
+  margin-left: 1rem;
+}
 .project__button-container {
+  width: 100%;
   justify-items: flex-end;
   gap: 1rem;
 }
@@ -340,6 +352,47 @@ body {
 }
 .project__button--blue {
   background-color: var(--gradient-color2);
+}
+.project__icon-container {
+  pointer-events: none;
+  position: absolute;
+  z-index: 9;
+  bottom: 1rem;
+  left: 0rem;
+  opacity: 0;
+  border: 1px solid #343764;
+  transition: ease-in-out 400ms;
+}
+.project__icon-container.active {
+  opacity: 1;
+  left: 1rem;
+}
+
+@media only screen and (max-width: 1277px) {
+  .project__description {
+    width: 25rem;
+    padding: 4rem 2rem 1rem;
+  }
+  .project__button-container {
+    width: 100%;
+    justify-items: flex-end;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .project__button {
+    width: 100%;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.8rem;
+  }
+  .project__button i {
+    font-size: 1.5rem;
+  }
+  .project__button span {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

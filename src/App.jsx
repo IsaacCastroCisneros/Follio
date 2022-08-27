@@ -1,9 +1,12 @@
 import { useState,useRef,useEffect } from 'react';
 import video from './assets/x3.mp4';
 
-function App() {
+function App() 
+{
   const iconLeftContainer = useRef();
   const iconRiteContainer = useRef();
+  const projectBannerLink = useRef();
+  const projectIconContainer = useRef();
 
 
   useEffect(()=>
@@ -11,6 +14,12 @@ function App() {
     iconRiteContainer.current
     .style=`width:${iconLeftContainer.current.offsetWidth}px`;
   })
+/* 
+  function mouseEnter()
+  {
+    
+    console.log('fdfd')
+  } */
 
   return (
     <>
@@ -75,8 +84,20 @@ function App() {
             className="project__banner-link"
             target="blank"
             href="https://audiogoose.herokuapp.com/"
+            ref={projectBannerLink}
           ></a>
-          <section className="project__description-container">
+          <section className="project__description-container"
+            onMouseEnter={()=>
+            {
+              projectBannerLink.current.classList.add('active');
+              projectIconContainer.current.classList.add('active');
+            }}
+            onMouseLeave={()=>
+            {
+              projectBannerLink.current.classList.remove('active');
+              projectIconContainer.current.classList.remove('active');
+            }}
+           >
             <div className='project__description'>
               <ul className="project__list">
                 <li>hmmmmmmmm</li>
@@ -95,6 +116,13 @@ function App() {
               </div>
             </div>
           </section>
+          <div className='project__icon-container' 
+          ref={projectIconContainer}>
+             <i class="fa-brands fa-square-js" title='JavaScript'></i>
+             <i class="fa-solid fa-database" title='Database'></i>
+             <i class="fa-brands fa-node-js"></i>
+             <i class="fa-brands fa-css3-alt"></i>
+          </div>
         </div>
       </div>
     </>

@@ -48,11 +48,16 @@
                 width: 40rem;
             }
 
-            &:hover
+            &:hover, &.active
             {
                transform: scale(110%);
                background-color: var(--secondary-color);
                opacity: .5;
+            }
+            &:hover ~ .project__icon-container
+            {
+                opacity: 1;
+                left: 1rem;
             }
         }
     }
@@ -79,14 +84,20 @@
         height: 100%;
         background-color: var(--secondary-color);
         z-index: 3;
+
+        &.active
+        {
+            width: 40rem;
+        }
     }
     &__list
     {
-
+        margin-left: 1rem;
     }
     &__button-container
     {
         @extend .flex;
+        width: 100%;
         justify-items:flex-end;
         gap: 1rem;
     }
@@ -113,4 +124,70 @@
             background-color: var(--gradient-color2);
         }
     }
+    &__icon-container
+    {
+        @extend .icon-container;
+        pointer-events: none;
+        position: absolute;
+        z-index: 9;
+        bottom: 1rem;
+        left: 0rem;
+        opacity: 0;
+        border: 1px solid rgb(52, 55, 100);
+        transition: ease-in-out 400ms;
+
+        &.active
+        {
+           opacity: 1;
+           left: 1rem;
+        }
+    }
+}
+
+
+@media only screen and (max-width:1277px) 
+{
+   .project
+   {
+    
+    &__description
+    {
+        width: 25rem;
+        padding: 4rem 2rem 1rem;
+    }
+    &__button-container
+    {
+        width: 100%;
+        justify-items:flex-end;
+        flex-direction: column;
+        gap: .5rem;
+    }
+    &__button
+    {
+        width: 100%;
+        gap: .5rem;
+        font-size: 1.1rem;
+        padding: .8rem 1.8rem;
+
+        i
+        {
+            font-size: 1.5rem;
+        }
+        span
+        {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+    }
+   }
+}
+
+@media only screen and (max-width:1146px) 
+{
+    
+}
+@media only screen and (max-width:500px) 
+{
+    
 }
