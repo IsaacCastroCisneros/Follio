@@ -1,6 +1,6 @@
 import React,{useRef} from 'react';
 import { AppContext } from '../App';
-import projects from "/assets/json/projects.json";
+import projects from "../assets/json/projects.json";
 
 export default function Project() 
 {
