@@ -442,5 +442,12 @@ body {
     margin-top: 2rem;
   }
 }
+.hero-about--footer {
+  padding-top: 64px;
+}
+.hero-about--footer section:last-child {
+  align-items: center;
+  margin-top: 0;
+}
 
 /*# sourceMappingURL=index.css.map */

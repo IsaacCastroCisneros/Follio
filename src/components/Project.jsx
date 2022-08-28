@@ -5,15 +5,15 @@ import projects from "../assets/json/projects.json";
 export default function Project() 
 {
   const projectIconContainer = useRef();
-  const{projectBannerLink}=AppContext;
+  const projectBannerLink = useRef();
   
   return (
     <>
       {
-        projects.map(project=>
+        projects.map((project,pos)=>
         {
             return (
-              <div className="projects-block">
+              <div ley={pos} className="projects-block">
                 <span className="projects-block__banner">{project.name}</span>
                 <div
                   className="project"

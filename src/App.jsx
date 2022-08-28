@@ -1,25 +1,17 @@
-import React ,{ useState,useRef,useEffect,useContext} from 'react';
-import Project from './components/Project';
-import video from '/assets/x3.mp4';
+import React, { useState, useRef, useEffect, useContext } from "react";
+import Project from "./components/Project";
+import video from "/assets/x3.mp4";
 
 export const AppContext = React.createContext();
 
 function App() 
 {
-  const iconLeftContainer = useRef();
-  const iconRiteContainer = useRef();
-  const projectBannerLink = useRef();
+  /* const projectBannerLink = useRef();
 
-  const contextValues =
-  {
+  const contextValues = {
     projectBannerLink,
-  }
+  }; */
 
-  useEffect(()=>
-  {
-    iconRiteContainer.current
-    .style=`width:${iconLeftContainer.current.offsetWidth}px`;
-  })
 
   return (
     <>
@@ -42,7 +34,7 @@ function App()
           </p>
         </section>
         <section className="hero-about__section">
-          <div ref={iconLeftContainer} className="hero-about__icon-container">
+          <div className="hero-about__icon-container">
             <i class="fa-brands fa-react" title="React.js"></i>
             <i class="fa-brands fa-js" title="Javascript"></i>
             <i class="fa-brands fa-css3-alt" title="CSS"></i>
@@ -66,8 +58,8 @@ function App()
               </span>
             </a>
           </div>
-          <div ref={iconRiteContainer} className="hero-about__icon-container">
-            <a href="">
+          <div className="hero-about__icon-container">
+            <a href="/assets/cv/Isaac_castro_CV-2.0.pdf" target="blank">
               <i class="fa-solid fa-file-pdf"></i>
               <span>CV</span>
             </a>
@@ -78,12 +70,49 @@ function App()
         <h1>Projects:</h1>
       </div>
       <div className="projects-container">
-        <AppContext.Provider value={contextValues}>
-           <Project/>
-        </AppContext.Provider>
+          <Project/>
       </div>
+      <div className="hero-video">
+        <video autoPlay muted loop>
+          <source src={video} />
+        </video>
+      </div>
+      <footer className="hero-about hero-about--footer">
+        <section className="hero-about__section">
+          <div className="hero-about__icon-container">
+            <i class="fa-brands fa-react" title="React.js"></i>
+            <i class="fa-brands fa-js" title="Javascript"></i>
+            <i class="fa-brands fa-css3-alt" title="CSS"></i>
+            <i class="fa-brands fa-sass" title="SASS"></i>
+            <i class="fa-brands fa-node-js" title="Node.js"></i>
+          </div>
+          <div className="hero-about__icon-container">
+            <a href="https://github.com/IsaacCastroCisneros" target="blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/isaac-castro-cisneros-52714416a/"
+              target="blank"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="mailto:isaaccastrocisneros@gmail.com">
+              <i class="fa-solid fa-envelope" target="blank"></i>
+              <span className="hero-about__icon-container-span">
+                isaaccastrocisneros@gmail.com
+              </span>
+            </a>
+          </div>
+          <div className="hero-about__icon-container">
+            <a href="/assets/cv/Isaac_castro_CV-2.0.pdf" target="blank">
+              <i class="fa-solid fa-file-pdf"></i>
+              <span>CV</span>
+            </a>
+          </div>
+        </section>
+      </footer>
     </>
   );
 }
 
-export default App
+export default App;

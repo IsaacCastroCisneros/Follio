@@ -1,2 +1,13 @@
 @use '../util/custom-properties';
 @use '../util/extends';
+
+.hero-about--footer
+{
+    padding-top: 64px;
+
+    section:last-child
+    {
+        align-items: center;
+        margin-top: 0;
+    }
+}
