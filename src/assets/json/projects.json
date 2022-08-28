@@ -1,7 +1,7 @@
 [
   {
     "name":"E-Commerce Site | Audio Goose",
-    "image":"../../src/assets/projects/goose.PNG",
+    "image":"/assets/projects/goose.PNG",
     "siteLink":"https://audiogoose.herokuapp.com/",
     "repoLink":"https://github.com/IsaacCastroCisneros/E-commerce-audioGoose",
     "description":
@@ -32,7 +32,7 @@
   },
   {
     "name":"Landign-page | Font Awesome",
-    "image":"../../src/assets/projects/fontAwesome.PNG",
+    "image":"/assets/projects/fontAwesome.PNG",
     "siteLink":"https://font-awesome-landing-page.netlify.app/",
     "repoLink":"https://github.com/IsaacCastroCisneros/Font-Awesome",
     "description":
@@ -54,7 +54,7 @@
   },
   {
     "name":"To-do List",
-    "image":"../../src/assets/projects/todo-list.PNG",
+    "image":"/assets/projects/todo-list.PNG",
     "siteLink":"https://todo-list-isaac.netlify.app/",
     "repoLink":"https://github.com/IsaacCastroCisneros/Todo-List",
     "description":
@@ -77,7 +77,7 @@
   },
   {
     "name":"Custom Selector",
-    "image":"../../src/assets/projects/selector.PNG",
+    "image":"/assets/projects/selector.PNG",
     "siteLink":"https://custom-selector-isaac.netlify.app/",
     "repoLink":"https://github.com/IsaacCastroCisneros/custom-selector",
     "description":
