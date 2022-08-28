@@ -1,6 +1,6 @@
 import React ,{ useState,useRef,useEffect,useContext} from 'react';
 import Project from './components/Project';
-import video from './assets/x3.mp4';
+import video from '/assets/x3.mp4';
 
 export const AppContext = React.createContext();
 
