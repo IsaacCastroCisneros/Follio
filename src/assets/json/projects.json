@@ -1,5 +1,28 @@
 [
   {
+    "name":"Rick and Morty Wiki",
+    "image":"/assets/projects/rick.PNG",
+    "siteLink":"https://react-rick-morty-wiki-ritn.vercel.app/",
+    "repoLink":"https://github.com/IsaacCastroCisneros/react-rick-morty-wiki.git",
+    "description":
+    [
+       "Consulta datos desde la API",
+       "Peticiones asincronas con React-Query",
+       "Permite filtrar busquedas"
+    ],
+    "icons":
+    [
+      {
+        "title":"Reac.js",
+        "class":"fa-brands fa-react"
+      },
+      {
+        "title":"CSS",
+        "class":"fa-brands fa-css3-alt"
+      }
+    ]
+  },
+  {
     "name":"E-Commerce Site | Audio Goose",
     "image":"/assets/projects/goose.PNG",
     "siteLink":"https://audiogoose.herokuapp.com/",
