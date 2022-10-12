@@ -30,7 +30,7 @@ function App()
           <h1 className="hero-about__title">sobre mi:</h1>
           <p className="hero-about__text">
             Soy un estudiante de ingenieria de sistemas en la universidad UPN a
-            fines, actualmente busco experiencia como desarrollador Front-End.
+            fines, actualmente busco experiencia como desarrollador web.
           </p>
         </section>
         <section className="hero-about__section">
