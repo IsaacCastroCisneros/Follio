@@ -9,7 +9,7 @@ export const AppContext = React.createContext();
 
 function App() 
 {
-  const{data,isFetching}=useQuery('data',fetching)
+  /* const{data,isFetching}=useQuery('data',fetching)
 
   async function fetching()
   {
@@ -20,7 +20,7 @@ function App()
   if(isFetching)
   {
     return null
-  }
+  } */
 
   return (
     <>
