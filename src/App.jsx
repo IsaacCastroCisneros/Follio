@@ -13,7 +13,7 @@ function App()
 
   async function fetching()
   {
-     const res = axios.get('../public/assets/x3.mp4')
+     const res = await axios.get('/assets/x3.mp4')
      return res.data
   }
 
@@ -32,7 +32,6 @@ function App()
       <div className="hero-video">
         <video autoPlay muted loop>
           <source src={video} 
-           onLoad={()=>{console.log('gfgfg')}}
            />
         </video>
       </div>
