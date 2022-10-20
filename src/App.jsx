@@ -1,17 +1,26 @@
 import React, { useState, useRef, useEffect, useContext } from "react";
 import Project from "./components/Project";
 import video from "/assets/x3.mp4";
+import { useQuery } from "react-query";
+import axios from 'axios'
+
 
 export const AppContext = React.createContext();
 
 function App() 
 {
-  /* const projectBannerLink = useRef();
+  const{data,isFetching}=useQuery('data',fetching)
 
-  const contextValues = {
-    projectBannerLink,
-  }; */
+  async function fetching()
+  {
+     const res = axios.get('../public/assets/x3.mp4')
+     return res.data
+  }
 
+  if(isFetching)
+  {
+    return null
+  }
 
   return (
     <>
@@ -22,7 +31,9 @@ function App()
       </header>
       <div className="hero-video">
         <video autoPlay muted loop>
-          <source src={video} />
+          <source src={video} 
+           onLoad={()=>{console.log('gfgfg')}}
+           />
         </video>
       </div>
       <div className="hero-about">
