@@ -12,7 +12,7 @@ function App()
       <header className="hero-banner">
         <div className="hero-banner__layer"></div>
         <h1 className="hero-banner__name">Isaac Castro</h1>
-        <p className="hero-banner__subtitle">front-end developer</p>
+        <p className="hero-banner__subtitle">web developer</p>
       </header>
       <div className="hero-video">
         <video autoPlay muted loop>
@@ -25,7 +25,7 @@ function App()
         <section className="hero-about__section">
           <h1 className="hero-about__title">sobre mi:</h1>
           <p className="hero-about__text">
-            Soy un estudiante de ingenieria de sistemas en la universidad UPN a
+            Soy bachiller de ingenieria de sistemas en la universidad UPN a
             fines, actualmente busco experiencia como desarrollador web.
           </p>
         </section>
@@ -100,7 +100,7 @@ function App()
             </a>
           </div>
           <div className="hero-about__icon-container">
-            <a href="/assets/cv/Isaac_castro_CV-2.0.pdf" target="blank">
+            <a href="/assets/cv/IsaacCastroCV2.pdf" target="blank">
               <i class="fa-solid fa-file-pdf"></i>
               <span>CV</span>
             </a>

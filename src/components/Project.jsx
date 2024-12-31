@@ -34,27 +34,31 @@ export default function Project()
                     ref={projectBannerLink}
                     style={{ backgroundImage: `url(${project.image})` }}
                   ></a>
-                  <div
+                  <ul
                     className="project__icon-container project__icon-container--desktop"
                     ref={projectIconContainer}
                   >
                     {
-                       project.icons.map(icon=>
+                       project.icons.map((icon)=>
                         {
-                            return <i className={icon.class} title={icon.title}></i>
+                            return (
+                              <li className="project__icon-container-icon">
+                                {icon.title}
+                              </li>
+                            ); 
                         })
                     }
-                  </div>
+                  </ul>
                   <div className="project__description-container project__description-container--mob">
                     <div className="project__description">
-                      <div className="project__icon-container project__icon-container--mob">
+                      <ul className="project__icon-container project__icon-container--mob">
                       {
                         project.icons.map(icon=>
                          {
-                            return <i className={icon.class} title={icon.title}></i>
+                            return <li className='project__icon-container-icon'>{icon.title}</li>
                          })
                       }
-                      </div>
+                      </ul>
                       <ul className="project__list">
                         {project.description.map((li) => {
                           return <li>{li}</li>;

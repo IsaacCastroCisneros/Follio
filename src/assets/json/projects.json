@@ -1,5 +1,38 @@
 [
   {
+    "name":"Backloggd",
+    "image":"/assets/projects/backloggd.PNG",
+    "siteLink":"https://backloggd-nextjs-production.up.railway.app/",
+    "repoLink":"https://github.com/IsaacCastroCisneros/Backloggd-next.js",
+    "description":
+    [
+       "Permite iniciar sesion como usuario",
+       "Permite buscar juegos",
+       "Permite logear juegos",
+       "Permite crear listas",
+       "Permite escribir reviews"
+    ],
+    "icons":
+    [
+      {
+        "title":"Typescript",
+        "class":"fa-brands fa-square-js"
+      },
+      {
+        "title":"MySQL",
+        "class":"fa-solid fa-database"
+      },
+      {
+        "title":"Next.js",
+        "class":"fa-brands fa-css3-alt"
+      },
+      {
+        "title":"Tailwind",
+        "class":"fa-brands fa-css3-alt"
+      }
+    ]
+  },
+  {
     "name":"Rick and Morty Wiki",
     "image":"/assets/projects/rick.PNG",
     "siteLink":"https://react-rick-morty-wiki-ritn.vercel.app/",
